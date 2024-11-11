@@ -1,0 +1,183 @@
+
+/* Заголовок/шапка */
+
+.swiper-header {
+  height: 80px;
+  background-image: linear-gradient(to right, #F8F8F8 , #FFFFFF );
+  border-top: 1px solid #D9FFF5;
+
+    @media (min-width: 768px) {
+      height: 56px;
+    }
+}
+
+.title__text {
+  padding: 16px;
+  
+}
+
+.title__text--style {
+  font-family: 'TTLakes-Regular';
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #7E7E82;
+}
+
+
+// КнопОчка для брендов и видов техники
+.logo-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+// свайпер
+
+.brands__swiper {
+  padding: 16px;
+  padding-bottom: 50px;
+  @media (min-width: 768px) {
+    padding: 24px;
+    padding-bottom: 8px;
+  }
+}
+
+.brands__swiper-wrapper {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
+    justify-items: center;
+  }
+  @media (min-width: 1120px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+.brands__swiper .swiper-slide {
+  width: 240px;
+}
+
+.brands-slide {
+  flex-shrink: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 72px;
+  padding: 16px;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+}
+
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  background-color: #DDDDDD;
+  margin: 0 6px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+
+.show-more {
+  grid-column: 1/2;
+  justify-self: start;
+  margin-left: 50px;
+}
+
+.show-more__button {
+  background-color: #F8F8F8;
+  font-family: 'TTLakes-Regular';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.img-down::before {
+  content: '';
+  background-image: url('../img/icon-more.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  top: 4px;
+}
+
+.img-down.reverse::before {
+  transform: scale(-1);
+}
+
+
+.hiden {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hiden-slide {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+//немного анимации
+.logo-button {
+  &::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    transition: all 0.25s ease;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.logo-button {
+  &::after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid #FF3E79;
+    border-right: 2px solid #FF3E79;
+    transform: rotate(45deg);
+    height: 8px;
+    width: 8px;
+    left: 12.5px;
+    top: 15px;
+  }
+
+  &:hover::after {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+}
+
+.logo-button {
+  &::before{
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 2px #FF3E79;
+  }
+  &:hover::before{
+    box-shadow: inset 0 0 0 40px #FF3E79;
+  }
+}

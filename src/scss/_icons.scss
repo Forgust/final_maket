@@ -1,0 +1,107 @@
+ /* ИКОНКИ */
+
+
+ .round-button {
+    height: 40px;
+    width: 40px;
+    background-color: #FF3E79;;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .logo {
+    width: 97px;
+    height: 51px;
+    background-size: 97px 51px;
+    background-position: 100% 100%;
+    margin-left: 0;
+  }
+
+  .round-button--checkstatus {
+    background-image: url('../img/checkstatus_element.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .round-button--repair {
+    background-image: url('../img/repair_element.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .round-button--burger {
+    background-image: url('../img/burger_element.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .round-button--search {
+    background-image: url('../img/search_element.svg');
+    background-repeat:  no-repeat;
+    background-position: center;
+  }
+  
+  .round-button--call {
+    background-image: url('../img/call_element.svg');
+    background-repeat:  no-repeat;
+    background-position: center;
+  }
+  
+  .round-button--chat {
+    content: "";
+    background-image: url('../img/chat_element_3.svg');
+    background-repeat:  no-repeat;
+    background-position: center;
+  }
+  
+  .round-button--profile {
+    content: "";
+    background-image: url('../img/profile_element.svg');
+    background-repeat:  no-repeat;
+    background-position: center;
+  }
+  
+  .round-button--close::before {
+    content: "";
+    background-color:#FFFFFF;
+    height: 25px;
+    width: 3px;
+    position: relative;
+    display: block;
+    left: 19px;
+    top: 8px;
+    transform: rotate(135deg);
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  .round-button--close::after {
+    content: "";
+    background-color: #FFFFFF;
+    height: 25px;
+    width: 3px;
+    position: relative;
+    display: block;
+    top: -17px;
+    left: 19px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  .aside-main__item::before {
+    content: "";
+    background-color: #41F6D7;
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    display: block;
+    top: auto;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.4s;
+    transform: scaleY(0.2);
+  }
+
+ 

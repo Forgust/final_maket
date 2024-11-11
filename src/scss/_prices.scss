@@ -1,0 +1,221 @@
+
+
+.prices__swiper {
+    overflow: hidden;
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 50px;
+    position: relative;
+    @media (min-width: 768px) {
+        padding: 0 24px;
+    }
+}
+
+.prices__swiper-wrapper {
+    @media (max-width: 768px) {
+        display: flex;
+        column-gap: 0;
+    }
+    @media (min-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.prices__swiper .swiper-slide {
+    width: 260px;
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+.prices-slide {
+    flex-shrink: 0;
+
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-family: 'TTLakes-medium', sans-serif;
+    font-weight: 500;
+    @media (min-width: 768px) {
+        grid-template-columns: 4fr 1fr 1fr;
+        width: 100%;
+        height: 64px;
+        border: none;
+        border-radius: 0;
+        align-items: center;
+    }
+}
+
+.prices .swiper-slide:not(:first-of-type,:last-of-type)::after {
+    @media (min-width: 768px) {
+        content: "";
+        width: 95%;
+        height: 2px;
+        background-color: #EAEAEA;
+        position: absolute;
+        bottom: 1px;
+        left: 16px;
+        
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    background-color: #DDDDDD;
+    margin: 0 6px;
+}
+
+
+
+// КНОПОЧКИ
+.red-long-button {
+    font-family: 'TTLakes-Medium';
+    letter-spacing: -0.15px;
+    grid-column: 2;
+    background-color: #FF3E79;
+    border-radius: 20px;
+    width: 120px;
+    height: 32px;
+    align-self: end;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    @media (min-width: 768px) {
+        grid-column: end;
+        align-self: center;
+    }
+}
+
+
+
+.red-long-button p{
+    transform: translateX(-10px);
+    transition: all 200ms;
+}
+
+.red-long-button::after {
+    content: "";
+    background-image: url('../img/dropdown-white.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    top: 12px;
+    right: 10px;
+    transition: all 200ms;
+}
+
+// ВНУТРЯНКА СЛАЙДА
+
+.service-container>p {
+    margin-bottom: 4px;
+}
+
+.service-container>p:first-of-type:not(.service__name--header) {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.service-container:first-child {
+    grid-column: span 2;
+    @media (min-width: 768px) {
+        grid-column: 1;
+    }
+}
+
+.service-container:nth-child(2) {
+    grid-column: span 2;
+    @media (min-width: 768px) {
+        grid-column: 2;
+    }
+}
+
+.prices p {
+    font-family: 'TTLakes-Regular', sans-serif;
+}
+
+.service__name {
+    color: #7E7E82;
+    line-height: 16px;
+    font-size: 14px;
+} 
+
+.prices-slide--header {
+    background-color: #F8F8F8;
+    @media (min-width: 768px) {
+        grid-template-columns: 4fr repeat(3, 1fr);
+        align-items: end;
+    }
+}
+
+.prices-slide--header>p:not(:first-of-type) {
+    @media (min-width: 1120px) {
+        padding-left: 16%;
+    }
+}
+
+.service__text {
+    line-height: 18px;
+    font-size: 14px;
+}
+
+
+// Халява
+.commercial-offer {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @media (min-width: 768px) {
+        padding: 0 24px;
+        width: 60%;
+        padding-bottom: 47px;
+    }
+}
+
+.commercial-offer__text {
+    font-family: 'TTLakes-Regular', sans-serif;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.commercial-offer__link {
+    font-family: 'TTLakes-Regular', sans-serif;
+    font-weight: 600;
+    color: black;
+    line-height: 24px;
+}
+
+.commercial-offer__link::after {
+    content: "";
+    background-image: url('../img/dropdown.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    right: -5px;
+    bottom: -1.2px;
+}
+
+//еще чуть анимаций
+.red-long-button:hover {
+    &>p {
+        transform: translateX(-14px);
+    }
+    &::after {
+        background-repeat:repeat;
+        width: 20px;
+    }
+
+}

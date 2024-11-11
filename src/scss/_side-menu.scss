@@ -1,0 +1,157 @@
+.aside {
+  display: flex;
+  width: 320px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "TTLakes-Regular";
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.aside {
+  box-shadow: -5px 0 50px;
+  @media (min-width: 1360px) {
+    box-shadow: none;
+  }
+}
+
+/* верхний блок */
+.aside-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.aside-header__left-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Главное меню */
+
+.aside-main {
+  margin-top: 16px;
+  height: auto;
+  width: 100%;
+  line-height: 32px;
+}
+.aside__top-container {
+  height: 90%;
+}
+
+.aside-main__li-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+
+.aside-main__item {
+  padding: 4px 0;
+  transition: 0.4s;
+}
+
+.aside-main__link {
+  display: block;
+  color: black;
+  margin-left: 24px;
+  font-weight: 600;
+}
+ /* АНИМАЦИИ */
+
+
+.aside-main__item:hover .aside-main__link,
+.aside-footer__link:hover,
+.aside-main__item.active {
+  opacity: 0.5;
+ }
+
+.aside-main__item:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.aside-main__item.active::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.round-button:hover {
+  transform: scale(1.2);
+}
+
+.round-button:hover.round-button--close::before {
+  transform: translate(-2px, 5px) rotate(-65deg);
+}
+
+.round-button:hover.round-button--close::after {
+  transform: translate(-2px, -5px) rotate(-115deg);
+}
+
+.lang-switcher__link:hover {
+  transform: scale(1.1);
+}
+
+/* нижний блок */
+.aside__bottom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.aside-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.aside-footer .round-button {
+  margin-right: 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacts a {
+  display: block;
+  color: black;
+}
+
+.email {
+  font-weight: 600;
+}
+
+.number {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.lang-switcher__li-list {
+  display: flex;
+  gap: 7px;
+  padding-top: 24px;
+}
+
+
+.lang-switcher__link {
+  display: block;
+  color: black;
+  font-weight: 600;
+}
+
+.lang-switcher__link.active {
+  opacity: 0.5;
+}
+
+ .round-button--close {
+    @media (min-width: 1360px) {
+      display: none;
+    }
+  }

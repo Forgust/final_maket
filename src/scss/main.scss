@@ -1,0 +1,56 @@
+@import 'fonts';
+@import 'page';
+@import 'icons';
+@import 'brands';
+@import 'devices';
+@import 'prices';
+@import 'side-menu';
+@import 'feedback';
+@import 'callback';
+
+.body {
+  @media (min-width: 1360px) {
+    display: flex;
+  }
+}
+
+.content {
+  opacity: 1;
+}
+
+.content.close {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.side-menu--left {
+  z-index: 2;
+  position: fixed;
+  transform: translateX(-1000px);
+  transition: 1s;
+  @media (min-width: 1360px) {
+    transform: translateX(0);
+    position: relative;
+  }
+}
+
+.side-menu--left.open {
+  transform: translateX(0);
+}
+
+.side-menu--left.close {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.feedback,
+.callback {
+  z-index: 3;
+  transform: translateX(1000px);
+}
+
+.feedback.open,
+.callback.open {
+  box-shadow: 5px 0 40px 0 black;
+  transform: translateX(0);
+}
