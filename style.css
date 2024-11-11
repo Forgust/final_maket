@@ -1,15 +1,50 @@
-@font-face {
-  font-family: 'Comic';
-  src: url(./fonts/comic.ttf) format("truetype");
-  font-weight: normal;
-  font-style: italic; }
+@use '../../node_modules/normalize.css/normalize.css';
+@use 'fonts';
+@use 'page';
+@use 'icons';
+@use 'brands';
+@use 'devices';
+@use 'prices';
+@use 'side-menu';
+@use 'feedback';
+@use 'callback';
+@media (min-width: 1360px) {
+  .body {
+    display: flex; } }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: #24292e;
-  color: #fff; }
+.content {
+  opacity: 1; }
+
+.content.close {
+  opacity: 0.1;
+  pointer-events: none; }
+
+.side-menu--left {
+  z-index: 2;
+  position: fixed;
+  transform: translateX(-1000px);
+  transition: 1s; }
+  @media (min-width: 1360px) {
+    .side-menu--left {
+      transform: translateX(0);
+      position: relative; } }
+
+.side-menu--left.open {
+  transform: translateX(0); }
+
+.side-menu--left.close {
+  opacity: 0.1;
+  pointer-events: none; }
+
+.feedback,
+.callback {
+  z-index: 3;
+  transform: translateX(1000px); }
+
+.feedback.open,
+.callback.open {
+  box-shadow: 5px 0 40px 0 black;
+  transform: translateX(0); }
 
 
 /*# sourceMappingURL=style.css.map*/
