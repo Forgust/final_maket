@@ -1,4 +1,7 @@
 import Swiper from 'swiper'
+// import Swiper styles
+import { Navigation, Pagination } from 'swiper/modules'
+Swiper.use([Navigation, Pagination])
 
 window.addEventListener('DOMContentLoaded', () => {
   const resizableSwiper = (
