@@ -637,17 +637,18 @@
   width: 260px; }
   @media (min-width: 768px) {
     .prices__swiper .swiper-slide {
-      width: 100%; } }
+      width: 100%;
+      background-color: white; } }
 
 .prices-slide {
   flex-shrink: 0;
-  background-color: white;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 260px;
   height: 200px;
   padding: 16px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 8px;
   font-family: 'TTLakes-medium', sans-serif;
   font-weight: 500; }
@@ -661,11 +662,21 @@
       align-items: center; } }
 
 @media (min-width: 768px) {
+  .prices .swiper-slide:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; } }
+
+@media (min-width: 768px) {
+  .prices .swiper-slide:nth-child(2) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; } }
+
+@media (min-width: 768px) {
   .prices .swiper-slide:not(:first-of-type, :last-of-type)::after {
-    content: "";
+    content: '';
     width: 95%;
     height: 2px;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     position: absolute;
     bottom: 1px;
     left: 16px; } }
@@ -674,14 +685,14 @@
   width: 12px;
   height: 12px;
   line-height: 12px;
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   margin: 0 6px; }
 
 .red-long-button {
   font-family: 'TTLakes-Medium';
   letter-spacing: -0.15px;
   grid-column: 2;
-  background-color: #FF3E79;
+  background-color: #ff3e79;
   border-radius: 20px;
   width: 120px;
   height: 32px;
@@ -700,7 +711,7 @@
   transition: all 200ms; }
 
 .red-long-button::after {
-  content: "";
+  content: '';
   background-image: url(./static/dropdown-white.svg);
   background-repeat: no-repeat;
   position: absolute;
@@ -734,12 +745,12 @@
   font-family: 'TTLakes-Regular', sans-serif; }
 
 .service__name {
-  color: #7E7E82;
+  color: #7e7e82;
   line-height: 16px;
   font-size: 14px; }
 
 .prices-slide--header {
-  background-color: #F8F8F8; }
+  background-color: #f8f8f8; }
   @media (min-width: 768px) {
     .prices-slide--header {
       grid-template-columns: 4fr repeat(3, 1fr);
@@ -776,7 +787,7 @@
   line-height: 24px; }
 
 .commercial-offer__link::after {
-  content: "";
+  content: '';
   background-image: url(./static/dropdown.svg);
   background-repeat: no-repeat;
   position: relative;
