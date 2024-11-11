@@ -634,11 +634,14 @@
     flex-direction: column; } }
 
 .prices__swiper .swiper-slide {
-  width: 260px; }
+  width: 260px;
+  background-color: white;
+  border-radius: 8px; }
   @media (min-width: 768px) {
     .prices__swiper .swiper-slide {
       width: 100%;
-      background-color: white; } }
+      background-color: white;
+      border-radius: 0; } }
 
 .prices-slide {
   flex-shrink: 0;
