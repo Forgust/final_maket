@@ -106,7 +106,8 @@
   }
 }
 
-.red-long-button p {
+.red-long-button > span {
+  display: block;
   transform: translateX(-10px);
   transition: all 200ms;
 }
@@ -219,11 +220,11 @@
 
 //еще чуть анимаций
 .red-long-button:hover {
-  & > p {
+  & > span {
     transform: translateX(-14px);
   }
   &::after {
     background-repeat: repeat;
-    width: 20px;
+    width: 21px;
   }
 }

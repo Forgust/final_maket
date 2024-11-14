@@ -1,79 +1,77 @@
 .feedback {
-    padding: 24px 16px;
-    height: 100vh;
-    width: 320px;
-    position: fixed;
-    background-color: white;
-    right: 0;
-    z-index: 2;
-    transition: 1s;
-    @media (min-width: 1360px) {
-        width: 20vw; 
-    }
-   
+  padding: 24px 16px;
+  height: 100vh;
+  width: 320px;
+  position: fixed;
+  background-color: white;
+  right: 0;
+  z-index: 2;
+  transition: 1s;
+  @media (min-width: 1360px) {
+    width: 20vw;
+  }
 }
 
 .feedback--container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    font-family: 'TTLakes-Regular', sans-serif;
-    font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'TTLakes-Regular', sans-serif;
+  font-size: 14px;
 }
-
 
 .feedback__input {
-    height: 48px;
-    width: 100%;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    padding: 16px;
+  height: 48px;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px;
 }
 
-#massage {
-    height: 118px;
+.feedback__input--massage {
+  height: 118px;
 }
 
-#feedback__button {
-    align-self: flex-end;
+.feedback__button {
+  align-self: flex-end;
 }
 
 .feedback__label {
-    font-family: 'TTLakes-Bold';
-    line-height: 24px;
-    font-size: 24px;
-    height: 40px;
-    display: flex;
-    align-items: center;
+  font-family: 'TTLakes-Bold';
+  line-height: 24px;
+  font-size: 24px;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .feedback__label::before {
-    content: "";
-    position: relative;
-    display: block;
-    background-color: #41F6D7;
-    border-radius: 8px;
-    height: 40px;
-    width: 4px;
-    left: -16px;
+  content: '';
+  position: relative;
+  display: block;
+  background-color: #41f6d7;
+  border-radius: 8px;
+  height: 40px;
+  width: 4px;
+  left: -16px;
 }
 
 .feedback .round-button--close {
-    margin-bottom: 32px;
-    transform: scaleX(-1);
-    @media (min-width: 1360px) {
-        display: block;
-        position: absolute;
-        right: 22vw;
-    }
+  margin-bottom: 32px;
+  transform: scaleX(-1);
+  @media (min-width: 1360px) {
+    display: block;
+    position: absolute;
+    right: 22vw;
+  }
 }
 
 .consent__text {
-    letter-spacing: 0.2px;
-    opacity: 0.8;
+  letter-spacing: 0.2px;
+  opacity: 0.8;
 }
 
-.consent__text>a {
-    opacity: 1;
-    color: #FF3E79;
+.consent__text > a {
+  opacity: 1;
+  color: #ff3e79;
 }

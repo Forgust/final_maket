@@ -23,7 +23,7 @@
   pointer-events: none;
 }
 
-.side-menu--left {
+.side-menu {
   z-index: 2;
   position: fixed;
   transform: translateX(-1000px);
@@ -34,11 +34,11 @@
   }
 }
 
-.side-menu--left.open {
+.side-menu.open {
   transform: translateX(0);
 }
 
-.side-menu--left.close {
+.side-menu.close {
   opacity: 0.1;
   pointer-events: none;
 }

@@ -2,10 +2,10 @@ import '../scss/main.scss'
 import './swipers'
 
 let headerRightBlock = document.querySelector('.header__right-block')
-let articleText = document.querySelector('.article__text')
+let articleText = document.querySelector('.preview__text')
 
 let menuCallback = document.querySelector('.callback')
-let menuBurger = document.querySelector('.side-menu--left')
+let menuBurger = document.querySelector('.side-menu')
 let menuFeedback = document.querySelector('.feedback')
 
 let mainPage = document.querySelector('.content')
@@ -26,7 +26,7 @@ let devicesList = document.querySelectorAll('.devices-slide')
 
 let closeButtonCallback = menuCallback.querySelector('.round-button--close')
 let closeButtonBurger = document.querySelector(
-  '.side-menu--left .round-button--close'
+  '.side-menu .round-button--close'
 )
 let closeButtonFeedback = document.querySelector(
   '.feedback .round-button--close'
