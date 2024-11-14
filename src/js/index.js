@@ -16,7 +16,7 @@ let burgerButton = document.querySelector('.round-button--burger')
 
 let brandsMoreButton = document.querySelector('.brands__button')
 let devicesMoreButton = document.querySelector('.devices__button')
-let readMoreButton = document.querySelector('.read-more__text')
+let readMoreButton = document.querySelector('.read-more')
 
 let feedbackButtonBurger = menuBurger.querySelector('.round-button--chat')
 let callbackButtonBurger = menuBurger.querySelector('.round-button--call')
