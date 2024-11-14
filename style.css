@@ -125,20 +125,28 @@
 .slide-menu::after {
   content: '';
   position: absolute;
+  display: block;
   height: 40px;
   width: 40px;
   box-shadow: inset -30px 0 30px 0 #f8f8f8;
   right: 0px; }
+  @media (min-width: 768px) {
+    .slide-menu::after {
+      display: none; } }
 
 .swiper::after {
   content: '';
   position: absolute;
+  display: block;
   height: 100%;
   width: 40px;
   box-shadow: inset -20px 0 20px 0 #f8f8f8;
   top: 0;
   right: 0;
   z-index: 2; }
+  @media (min-width: 768px) {
+    .swiper::after {
+      display: none; } }
 
 .slide-menu::-webkit-scrollbar {
   width: 0; }
@@ -170,42 +178,31 @@
   border-radius: 6px;
   background-color: white; }
 
-.main__article {
+.main__preview {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 16px; }
+  padding-bottom: 24px; }
 
-.article__container {
+.preview__cantainer {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-  @media (min-width: 768px) {
-    .article__container {
-      padding: 16px; } }
+  flex-direction: column;
+  align-self: center; }
 
-.article__text {
+.preview__text {
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   height: 8em;
-  padding: 8px; }
+  padding: 16px; }
 
-.article__text.max {
+.preview__text.max {
   overflow-y: visible;
   height: 100%; }
 
-.article__text p:first-child {
+.preview__text p:first-child {
   padding-bottom: 20px; }
 
-.article__image {
-  max-width: 320px; }
-
-.article__text-container {
-  display: flex;
-  flex-direction: column; }
-
-.article__text--style {
+.preview__text--style {
   font-size: 14px;
   font-family: 'TTLakes-Regular', sans-serif;
   font-weight: 200;
@@ -216,7 +213,8 @@
   display: flex;
   align-items: center;
   background-color: #f8f8f8;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 16px; }
 
 .read-more::before {
   content: '';
@@ -255,26 +253,24 @@
 @media (min-width: 768px) {
   .main {
     gap: 24px; }
-  .main__article {
-    padding: 0 24px; }
-  .article__text-container {
-    gap: 10px; }
-  .article__text {
+  .header__left-block {
+    gap: 24px; }
+  .main__preview {
+    padding: 0 24px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px; }
+  .preview__text {
     height: 10.5em;
     padding: 0;
     padding-top: 5px; }
-  .article__container {
-    flex-direction: row;
-    flex-wrap: nowrap; }
-  .article__image {
+  .preview__image {
     max-width: none;
     width: 360px;
     height: 208px;
     border-radius: 15px; }
   .button-for-tablet {
     display: flex; }
-  .header__right-block::after {
-    right: 124px; }
   .header::before {
     content: '';
     background-color: #eaeaea;
@@ -727,7 +723,8 @@
       grid-column: end;
       align-self: center; } }
 
-.red-long-button p {
+.red-long-button > span {
+  display: block;
   transform: translateX(-10px);
   transition: all 200ms; }
 
@@ -818,12 +815,12 @@
   right: -5px;
   bottom: -1.2px; }
 
-.red-long-button:hover > p {
+.red-long-button:hover > span {
   transform: translateX(-14px); }
 
 .red-long-button:hover::after {
   background-repeat: repeat;
-  width: 20px; }
+  width: 21px; }
 
 .aside {
   display: flex;
@@ -976,14 +973,14 @@
 .feedback__input {
   height: 48px;
   width: 100%;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 8px;
   padding: 16px; }
 
-#massage {
+.feedback__input--massage {
   height: 118px; }
 
-#feedback__button {
+.feedback__button {
   align-self: flex-end; }
 
 .feedback__label {
@@ -995,10 +992,10 @@
   align-items: center; }
 
 .feedback__label::before {
-  content: "";
+  content: '';
   position: relative;
   display: block;
-  background-color: #41F6D7;
+  background-color: #41f6d7;
   border-radius: 8px;
   height: 40px;
   width: 4px;
@@ -1019,7 +1016,7 @@
 
 .consent__text > a {
   opacity: 1;
-  color: #FF3E79; }
+  color: #ff3e79; }
 
 .callback {
   padding: 24px 16px;
@@ -1100,20 +1097,20 @@
   opacity: 0.1;
   pointer-events: none; }
 
-.side-menu--left {
+.side-menu {
   z-index: 2;
   position: fixed;
   transform: translateX(-1000px);
   transition: 1s; }
   @media (min-width: 1360px) {
-    .side-menu--left {
+    .side-menu {
       transform: translateX(0);
       position: relative; } }
 
-.side-menu--left.open {
+.side-menu.open {
   transform: translateX(0); }
 
-.side-menu--left.close {
+.side-menu.close {
   opacity: 0.1;
   pointer-events: none; }
 
