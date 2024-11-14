@@ -184,9 +184,9 @@
   padding-bottom: 24px; }
 
 .preview__cantainer {
+  padding-top: 16px;
   display: flex;
-  flex-direction: column;
-  align-self: center; }
+  flex-direction: column; }
 
 .preview__text {
   overflow-y: hidden;
@@ -316,12 +316,12 @@
     padding-left: 30px; }
   .slide-menu {
     padding-left: 32px; }
-  .article__container {
+  .main__preview {
+    padding: 0 34px; }
+  .preview__container {
     align-self: flex-start;
     gap: 24px; }
-  .article__text-container {
-    padding-top: 16px; }
-  .article__image {
+  .preview__image {
     width: 530px;
     height: 307px; }
   .button-for-desktop {
