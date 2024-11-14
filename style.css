@@ -31,8 +31,8 @@
   height: 88px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #D9FFF5;
-  background-color: #FFFFFF; }
+  border-bottom: 1px solid #d9fff5;
+  background-color: #ffffff; }
 
 .header__right-block,
 .header__left-block {
@@ -41,14 +41,14 @@
 .header__right-block > button:nth-last-of-type(2) {
   margin-left: 16px; }
 
-.header__right-block > button:nth-last-of-type(2)::after {
-  content: "";
-  background-color: #EAEAEA;
+.header::after {
+  content: '';
+  background-color: #eaeaea;
   width: 2px;
   height: 32px;
-  position: relative;
+  position: absolute;
   display: block;
-  left: -16px; }
+  right: 125px; }
 
 .header__left-block--style {
   align-items: center;
@@ -58,7 +58,7 @@
 .button-for-tablet {
   display: none; }
 
-.header--icon-margin {
+.round-button--icon-margin {
   margin-right: 16px; }
 
 .header__logo {
@@ -68,7 +68,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #F8F8F8; }
+  background-color: #f8f8f8; }
 
 .main__title-block {
   padding-top: 24px; }
@@ -79,10 +79,10 @@
   display: flex; }
 
 .main__title-container::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
-  background-color: #41F6D7;
+  background-color: #41f6d7;
   border-radius: 6px;
   height: 40px;
   width: 4px; }
@@ -92,7 +92,7 @@
 
 .main__title--style {
   font-size: 28px;
-  font-family: "TTLakes-Bold";
+  font-family: 'TTLakes-Bold';
   padding-left: 5%; }
 
 .main__title-container {
@@ -105,10 +105,9 @@
   display: flex;
   align-items: center;
   font-size: 18px;
-  font-family: "TTLakes-Medium"; }
+  font-family: 'TTLakes-Medium'; }
 
-.main__buttons a,
-.read-more a {
+.main__buttons a {
   align-items: center;
   display: flex;
   gap: 5px;
@@ -118,10 +117,28 @@
   display: flex;
   overflow-x: auto;
   font-size: 16px;
-  color: #7E7E82;
-  font-family: "TTLakes-Medium";
+  color: #7e7e82;
+  font-family: 'TTLakes-Medium';
   padding: 24px 16px 0 16px;
   max-width: 100%; }
+
+.slide-menu::after {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  box-shadow: inset -30px 0 30px 0 #f8f8f8;
+  right: 0px; }
+
+.swiper::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  box-shadow: inset -20px 0 20px 0 #f8f8f8;
+  top: 0;
+  right: 0;
+  z-index: 2; }
 
 .slide-menu::-webkit-scrollbar {
   width: 0; }
@@ -190,17 +207,19 @@
 
 .article__text--style {
   font-size: 14px;
-  font-family: "TTLakes-Regular", sans-serif;
+  font-family: 'TTLakes-Regular', sans-serif;
   font-weight: 200;
   line-height: 20px;
   letter-spacing: 0.2px; }
 
 .read-more {
   display: flex;
-  padding: 16px; }
+  align-items: center;
+  background-color: #f8f8f8;
+  cursor: pointer; }
 
-.read-more__text::before {
-  content: "";
+.read-more::before {
+  content: '';
   background-image: url(./static/icon-more.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -210,11 +229,11 @@
   display: block;
   margin-right: 6px; }
 
-.read-more__text.reverse::before {
+.read-more.reverse::before {
   transform: scaleY(-1); }
 
-.read-more__text--style {
-  font-family: "TTLakes-Regular";
+.read-more--style {
+  font-family: 'TTLakes-Regular';
   font-weight: 600;
   font-size: 16px; }
 
@@ -223,13 +242,13 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border-top: 1px solid #D9FFF5;
+  border-top: 1px solid #d9fff5;
   height: 120px;
-  background-color: #F8F8F8; }
+  background-color: #f8f8f8; }
 
 .footer--text-style {
   font-family: 'TTLakes-Regular', sans-serif;
-  color: #7E7E82;
+  color: #7e7e82;
   line-height: 16px;
   font-size: 14px; }
 
@@ -256,15 +275,14 @@
     display: flex; }
   .header__right-block::after {
     right: 124px; }
-  .header__logo::before {
-    content: "";
-    background-color: #EAEAEA;
+  .header::before {
+    content: '';
+    background-color: #eaeaea;
     display: block;
     position: absolute;
     height: 32px;
     width: 2px;
-    left: 75px;
-    top: 28px; }
+    left: 75px; }
   .header__logo {
     padding-left: 20px; }
   .header__left-block--style {
